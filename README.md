@@ -19,35 +19,36 @@ This project is a web crawler that extracts entries from [Hacker News](https://n
 
 ### Installation
 1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/hacker-news-crawler.git
+    cd hacker-news-crawler
+    ```
 
-   ```bash
-   git clone <repository_url>
+2. Install dependencies:
+    ```sh
+    npm install
+    # or
+    yarn install
+    ```
 
-## Available Scripts
+3. Start the application:
+    ```sh
+    npm start
+    # or
+    yarn start
+    ```
 
-In the project directory, you can run:
+## Usage
+- The application fetches the latest entries from Hacker News on load.
+- Use the filter buttons to filter entries by comments or points.
+- Filter usage data is stored in local storage.
 
-### `npm start`
+## Project Structure
+- `src/`
+    - `components/`: React components
+    - `hooks/`: Custom hooks
+    - `services/`: API calls and filtering logic
+    - `utils/`: Utility functions
+    - `types/`: TypeScript types
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
+    

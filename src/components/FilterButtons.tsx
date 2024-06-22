@@ -12,7 +12,7 @@ const FilterButtons: React.FC<FilterButtonsProps> = ({
     onResetFilters,
 }) => {
     return (
-        <div>
+        <div className="filter-buttons">
             <button onClick={onFilterByComments}>Filter by Comments</button>
             <button onClick={onFilterByPoints}>Filter by Points</button>
             <button onClick={onResetFilters}>Reset Filters</button>

@@ -1,26 +1,17 @@
-import { Entry } from '../types'
 import React from 'react'
+import { Entry } from '../types'
 
 interface EntryItemProps {
-    entries: Entry[]
+    entry: Entry
 }
 
-/**
- * EntryItem component.
- * Renders individual entry items in a list.
- */
-
-const EntryItem: React.FC<EntryItemProps> = ({ entries }) => {
+const EntryItem: React.FC<EntryItemProps> = ({ entry }) => {
     return (
-        <ul>
-            {entries.map((entry) => (
-                <li key={entry.number}>
-                    <h2>{entry.title}</h2>
-                    <p>Points: {entry.points}</p>
-                    <p>Comments: {entry.comments}</p>
-                </li>
-            ))}
-        </ul>
+        <li className="entry-item">
+            <h2>{entry.title}</h2>
+            <p>Points: {entry.points}</p>
+            <p>Comments: {entry.comments}</p>
+        </li>
     )
 }
 

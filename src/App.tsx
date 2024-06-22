@@ -27,7 +27,7 @@ const App: React.FC = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <h1>Hacker News Entries</h1>
             {/* Render filter buttons */}
             <FilterButtons
