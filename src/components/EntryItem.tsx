@@ -5,6 +5,11 @@ interface EntryItemProps {
     entries: Entry[]
 }
 
+/**
+ * EntryItem component.
+ * Renders individual entry items in a list.
+ */
+
 const EntryItem: React.FC<EntryItemProps> = ({ entries }) => {
     return (
         <ul>

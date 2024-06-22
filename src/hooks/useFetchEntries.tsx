@@ -3,6 +3,11 @@ import { fetchEntries } from '../services/api'
 import { getStoredEntries, saveEntries } from '../utils/storage'
 import { Entry } from '../types'
 
+/**
+ * Custom hook to fetch entries from the API or local storage.
+ * @returns {object} - An object containing the entries, loading state, and error state.
+ */
+
 export const useFetchEntries = () => {
     const [entries, setEntries] = useState<Entry[]>([])
     const [loading, setLoading] = useState<boolean>(true)

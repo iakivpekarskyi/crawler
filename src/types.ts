@@ -1,3 +1,5 @@
+// TypeScript interfaces for the application
+
 export interface Entry {
     number: number
     title: string

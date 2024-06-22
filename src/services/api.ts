@@ -1,6 +1,11 @@
 import axios from 'axios'
 import { Entry } from '../types'
 
+/**
+ * Fetches the top 30 entries from Hacker News.
+ * @returns {Promise<Entry[]>} - A promise that resolves to the list of entries.
+ */
+
 export const fetchEntries = async (): Promise<Entry[]> => {
     try {
         const response = await axios.get(

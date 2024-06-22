@@ -6,6 +6,11 @@ interface EntryListProps {
     entries: Entry[]
 }
 
+/**
+ * EntryList component.
+ * Renders a list of entries.
+ */
+
 const EntryList: React.FC<EntryListProps> = ({ entries }) => {
     return (
         <div>
