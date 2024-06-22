@@ -3,9 +3,15 @@ import './App.css'
 import { fetchEntries } from './services/api'
 import EntryList from './components/EntryList'
 import { Entry } from './types'
+import {
+    filterEntriesByComments,
+    filterEntriesByPoints,
+} from './services/filter'
+import { saveUsageData } from './utils/storage'
 
 const App: React.FC = () => {
     const [entries, setEntries] = useState<Entry[]>([])
+    const [filteredEntries, setFilteredEntries] = useState<Entry[]>([])
     const [loading, setLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
 
@@ -29,6 +35,18 @@ const App: React.FC = () => {
         getEntries()
     }, [])
 
+    const handleFilterByComments = () => {
+        const filtered = filterEntriesByComments(entries)
+        setFilteredEntries(filtered)
+        saveUsageData('comments')
+    }
+
+    const handleFilterByPoints = () => {
+        const filtered = filterEntriesByPoints(entries)
+        setFilteredEntries(filtered)
+        saveUsageData('points')
+    }
+
     if (loading) {
         return <div> Loading</div>
     }
@@ -40,7 +58,11 @@ const App: React.FC = () => {
     return (
         <div>
             <h1>Hacker News Entries</h1>
-            <EntryList entries={entries} />
+            <EntryList
+                entries={filteredEntries.length > 0 ? filteredEntries : entries}
+                onFilterByComments={handleFilterByComments}
+                onFilterByPoints={handleFilterByPoints}
+            />
         </div>
     )
 }

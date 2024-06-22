@@ -11,3 +11,8 @@ export interface Story {
     score: number
     descendants: number
 }
+
+export interface UsageData {
+    timestamp: string
+    filterType: string
+}
