@@ -1,36 +1,21 @@
 import React from 'react'
-import { Entry } from '../types'
-import {
-    filterEntriesByComments,
-    filterEntriesByPoints,
-} from '../services/filter'
-import { saveUsageData } from '../utils/storage'
 
 interface FilterButtonsProps {
-    entries: Entry[]
-    setFilteredEntries: React.Dispatch<React.SetStateAction<Entry[]>>
+    onFilterByComments: () => void
+    onFilterByPoints: () => void
+    onResetFilters: () => void
 }
 
 const FilterButtons: React.FC<FilterButtonsProps> = ({
-    entries,
-    setFilteredEntries,
+    onFilterByComments,
+    onFilterByPoints,
+    onResetFilters,
 }) => {
-    const handleFilterByComments = () => {
-        const filtered = filterEntriesByComments(entries)
-        setFilteredEntries(filtered)
-        saveUsageData('comments')
-    }
-
-    const handleFilterByPoints = () => {
-        const filtered = filterEntriesByPoints(entries)
-        setFilteredEntries(filtered)
-        saveUsageData('points')
-    }
-
     return (
         <div>
-            <button onClick={handleFilterByComments}>Filter by Comments</button>
-            <button onClick={handleFilterByPoints}>Filter by Points</button>
+            <button onClick={onFilterByComments}>Filter by Comments</button>
+            <button onClick={onFilterByPoints}>Filter by Points</button>
+            <button onClick={onResetFilters}>Reset Filters</button>
         </div>
     )
 }
