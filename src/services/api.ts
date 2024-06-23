@@ -1,10 +1,7 @@
+// src/services/api.js or .ts
+
 import axios from 'axios'
 import { Entry } from '../types'
-
-/**
- * Fetches the top 30 entries from Hacker News.
- * @returns {Promise<Entry[]>} - A promise that resolves to the list of entries.
- */
 
 export const fetchEntries = async (): Promise<Entry[]> => {
     try {
@@ -17,7 +14,6 @@ export const fetchEntries = async (): Promise<Entry[]> => {
                 `https://hacker-news.firebaseio.com/v0/item/${id}.json`
             )
             const story = storyResponse.data
-
             return {
                 number: id,
                 title: story.title,
