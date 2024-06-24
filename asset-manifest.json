@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crawler/static/css/main.e90e6f8f.css",
+    "main.js": "/crawler/static/js/main.3bfa7e36.js",
+    "index.html": "/crawler/index.html",
+    "main.e90e6f8f.css.map": "/crawler/static/css/main.e90e6f8f.css.map",
+    "main.3bfa7e36.js.map": "/crawler/static/js/main.3bfa7e36.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e90e6f8f.css",
+    "static/js/main.3bfa7e36.js"
+  ]
+}
