@@ -1,6 +1,8 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
 
+// Database was added (Firebase) -  I had very little clue how to do it, so used Google. The only thing that I wanted to show that I am able to learn fast and implement some challenging task and also wanted to be transparent about.
+
 // Firebase configuration object
 const firebaseConfig = {
     apiKey: 'AIzaSyD8mjFkin0hfSlVELl263xkBqOQsRFjUnc',

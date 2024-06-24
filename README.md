@@ -10,6 +10,7 @@ This project is a web crawler that extracts entries from [Hacker News](https://n
     - Titles with five or fewer words, ordered by points.
 - Stores and retrieves entries from local storage.
 - Tracks filter usage data with timestamps.
+- Database was added (Firebase) -  I had very little clue how to do it, so used Google. The only thing that I wanted to show that I am able to learn fast and implement some challenging task and also wanted to be transparent about.
 
 ## Setup and Installation
 
